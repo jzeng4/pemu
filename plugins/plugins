@@ -1,0 +1,121 @@
+
+plugin.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <docount>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	57                   	push   %edi
+   4:	56                   	push   %esi
+   5:	53                   	push   %ebx
+   6:	83 ec 1c             	sub    $0x1c,%esp
+   9:	e8 fc ff ff ff       	call   a <docount+0xa>
+   e:	81 c3 02 00 00 00    	add    $0x2,%ebx
+  14:	8b 45 08             	mov    0x8(%ebp),%eax
+  17:	8b 50 04             	mov    0x4(%eax),%edx
+  1a:	8b 00                	mov    (%eax),%eax
+  1c:	89 c6                	mov    %eax,%esi
+  1e:	89 d7                	mov    %edx,%edi
+  20:	83 c0 01             	add    $0x1,%eax
+  23:	83 d2 00             	adc    $0x0,%edx
+  26:	8b 4d 08             	mov    0x8(%ebp),%ecx
+  29:	89 01                	mov    %eax,(%ecx)
+  2b:	89 51 04             	mov    %edx,0x4(%ecx)
+  2e:	8d 93 00 00 00 00    	lea    0x0(%ebx),%edx
+  34:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+  3a:	8b 00                	mov    (%eax),%eax
+  3c:	89 74 24 08          	mov    %esi,0x8(%esp)
+  40:	89 7c 24 0c          	mov    %edi,0xc(%esp)
+  44:	89 54 24 04          	mov    %edx,0x4(%esp)
+  48:	89 04 24             	mov    %eax,(%esp)
+  4b:	e8 fc ff ff ff       	call   4c <docount+0x4c>
+  50:	83 c4 1c             	add    $0x1c,%esp
+  53:	5b                   	pop    %ebx
+  54:	5e                   	pop    %esi
+  55:	5f                   	pop    %edi
+  56:	5d                   	pop    %ebp
+  57:	c3                   	ret    
+
+00000058 <Instruction>:
+  58:	55                   	push   %ebp
+  59:	89 e5                	mov    %esp,%ebp
+  5b:	53                   	push   %ebx
+  5c:	83 ec 24             	sub    $0x24,%esp
+  5f:	e8 fc ff ff ff       	call   60 <Instruction+0x8>
+  64:	81 c3 02 00 00 00    	add    $0x2,%ebx
+  6a:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+  70:	c7 44 24 10 ff ff ff 	movl   $0xffffffff,0x10(%esp)
+  77:	ff 
+  78:	8d 93 00 00 00 00    	lea    0x0(%ebx),%edx
+  7e:	89 54 24 0c          	mov    %edx,0xc(%esp)
+  82:	89 44 24 08          	mov    %eax,0x8(%esp)
+  86:	c7 44 24 04 01 00 00 	movl   $0x1,0x4(%esp)
+  8d:	00 
+  8e:	8b 45 08             	mov    0x8(%ebp),%eax
+  91:	89 04 24             	mov    %eax,(%esp)
+  94:	e8 fc ff ff ff       	call   95 <Instruction+0x3d>
+  99:	83 c4 24             	add    $0x24,%esp
+  9c:	5b                   	pop    %ebx
+  9d:	5d                   	pop    %ebp
+  9e:	c3                   	ret    
+
+0000009f <Fini>:
+  9f:	55                   	push   %ebp
+  a0:	89 e5                	mov    %esp,%ebp
+  a2:	53                   	push   %ebx
+  a3:	83 ec 14             	sub    $0x14,%esp
+  a6:	e8 fc ff ff ff       	call   a7 <Fini+0x8>
+  ab:	81 c3 02 00 00 00    	add    $0x2,%ebx
+  b1:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+  b7:	8b 00                	mov    (%eax),%eax
+  b9:	89 c2                	mov    %eax,%edx
+  bb:	8d 83 06 00 00 00    	lea    0x6(%ebx),%eax
+  c1:	89 54 24 0c          	mov    %edx,0xc(%esp)
+  c5:	c7 44 24 08 0f 00 00 	movl   $0xf,0x8(%esp)
+  cc:	00 
+  cd:	c7 44 24 04 01 00 00 	movl   $0x1,0x4(%esp)
+  d4:	00 
+  d5:	89 04 24             	mov    %eax,(%esp)
+  d8:	e8 fc ff ff ff       	call   d9 <Fini+0x3a>
+  dd:	83 c4 14             	add    $0x14,%esp
+  e0:	5b                   	pop    %ebx
+  e1:	5d                   	pop    %ebp
+  e2:	c3                   	ret    
+
+000000e3 <Usage>:
+  e3:	55                   	push   %ebp
+  e4:	89 e5                	mov    %esp,%ebp
+  e6:	b8 00 00 00 00       	mov    $0x0,%eax
+  eb:	5d                   	pop    %ebp
+  ec:	c3                   	ret    
+
+000000ed <init_main>:
+  ed:	55                   	push   %ebp
+  ee:	89 e5                	mov    %esp,%ebp
+  f0:	53                   	push   %ebx
+  f1:	83 ec 14             	sub    $0x14,%esp
+  f4:	e8 fc ff ff ff       	call   f5 <init_main+0x8>
+  f9:	81 c3 02 00 00 00    	add    $0x2,%ebx
+  ff:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 102:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 106:	8b 45 08             	mov    0x8(%ebp),%eax
+ 109:	89 04 24             	mov    %eax,(%esp)
+ 10c:	e8 fc ff ff ff       	call   10d <init_main+0x20>
+ 111:	85 c0                	test   %eax,%eax
+ 113:	74 07                	je     11c <init_main+0x2f>
+ 115:	e8 fc ff ff ff       	call   116 <init_main+0x29>
+ 11a:	eb 0a                	jmp    126 <init_main+0x39>
+ 11c:	e8 fc ff ff ff       	call   11d <init_main+0x30>
+ 121:	b8 00 00 00 00       	mov    $0x0,%eax
+ 126:	83 c4 14             	add    $0x14,%esp
+ 129:	5b                   	pop    %ebx
+ 12a:	5d                   	pop    %ebp
+ 12b:	c3                   	ret    
+
+Disassembly of section .text.__i686.get_pc_thunk.bx:
+
+00000000 <__i686.get_pc_thunk.bx>:
+   0:	8b 1c 24             	mov    (%esp),%ebx
+   3:	c3                   	ret    
